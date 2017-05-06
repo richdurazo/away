@@ -1,14 +1,20 @@
-import { Routes, RouterModule } from "@angular/router";
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 
-import { MessagesComponent } from "./messages/messages.component";
 
 
 
+const appRoutes: Routes = [
+    { path: '', component: HomeComponent },
+        { path: 'profile', component: ProfileComponent },
 
-const APP_ROUTES: Routes = [
-    { path: '', redirectTo: '/', pathMatch: 'full' },
-    { path: 'profile', component: MessagesComponent },
+
+
 
 ];
 
-export const routing = RouterModule.forRoot(APP_ROUTES);
+export const appRoutingProviders: any[] = [];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
