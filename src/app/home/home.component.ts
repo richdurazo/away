@@ -11,14 +11,7 @@ export class HomeComponent implements OnInit {
         initialValue: 0,
         ratio: .3
     };
-    parallaxConfig1: ParallaxConfig = {
-      initialValue: 0,
-        ratio: .02
-    };
-      parallaxConfig3: ParallaxConfig = {
-      initialValue: 50,
-        ratio: .02
-    };
+
   constructor() { }
 
   ngOnInit() {

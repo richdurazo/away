@@ -1,16 +1,6 @@
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <div class="navbar-brand" href="#">
-        away
-      </div>
-    </div>
-    <ul class="nav nav-pills navbar-right">
-            <li><a href="#">Messages</a></li>
+<div class="nav-user">
+<img *ngIf="auth.authenticated()" src="{{profile.picture}}" alt="profile" class="img-circle">
 
-      <li><a href="#">Profile</a></li>
-            <li class="active"><a href="#">Home</a></li>
+<h3 *ngIf="auth.authenticated()">{{profile.nickname}}</h3>
 
-    </ul>
-  </div>
-</nav>
+</div>
