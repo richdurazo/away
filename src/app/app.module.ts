@@ -11,7 +11,8 @@ import { Auth } from './auth.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import { AuthGuard } from './auth.guard';
+// import { UserListComponent } from './user-list/user-list.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
     Parallax,
     HomeComponent,
     ProfileComponent
+    // UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   providers: [
     appRoutingProviders,
-    Auth
+    Auth,
+    AuthGuard
     ],
   bootstrap: [AppComponent]
 })

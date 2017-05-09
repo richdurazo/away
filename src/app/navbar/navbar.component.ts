@@ -7,11 +7,9 @@ import { Auth } from '../auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-    profile: any;
 
   constructor(private auth: Auth) {
-    this.profile = JSON.parse(localStorage.getItem('profile'));
-    console.log(this.profile);
+    console.log(auth.userProfile)
   }
 
   ngOnInit() {

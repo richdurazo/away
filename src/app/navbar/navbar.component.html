@@ -1,6 +1,6 @@
 <div class="nav-user">
-<img *ngIf="auth.authenticated()" src="{{profile.picture}}" alt="profile" class="img-circle">
+<img *ngIf="auth.authenticated()" src="{{auth.userProfile.picture}}" alt="" class="img-circle">
 
-<h3 *ngIf="auth.authenticated()">{{profile.nickname}}</h3>
+<h4 *ngIf="auth.authenticated()">Welcome {{auth.userProfile.nickname}}</h4>
 
 </div>

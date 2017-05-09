@@ -1,6 +1,14 @@
-# Away
+# A_way
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+A_way is a Travel application that lets you meet others who love to adventure as much as you do!
+
+A_way aims to connect users with other users who have the same travel style as them and plan and track trips together. 
+
+If you current style is backpacking through thailand in boardshorts or staying at 5 star hotels in Paris we will connect you with others so you don't have to go it alone. 
+
+Life is too short to be a lone wolf.
 
 ## Development server
 

@@ -1,13 +1,15 @@
 <div class="container">
   <h2>profile</h2>
-  <h4>profile name: {{ profile.name }}</h4>
+  <h4>nickname: {{ auth.userProfile.name }}</h4>
   <div class="row">
-    <div class="col-md-2">
-      <img src="{{ profile.picture }}" alt="">
+    <div class="col-sm-4">
+      <img class="thumbnail" style="width:100%" src="{{ auth.userProfile.picture }}" alt="">
     </div>
-    <div class="col-md-10">
+    <div class="col-sm-6">
       <ul class="list-group">
-        <li class="list-group-item">email: {{ profile.email }}</li>
+        <li class="list-group-item">email: {{ auth.userProfile.email }}</li>
+        <li class="list-group-item">profile last updated: {{ auth.userProfile.updated_at }}</li>
+
       </ul>
     </div>
   </div>

@@ -2,16 +2,25 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-
-
-
+import { AuthGuard } from './auth.guard';
+// import { UserListComponent } from './user-list/user-list.component';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
-        { path: 'profile', component: ProfileComponent },
+    {
+        path: '',
+        component: HomeComponent
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
+    },
+    // {
+    //     path: 'users',
+    //     component: UserListComponent,
+    //     canActivate: [AuthGuard]
 
-
-
+    // }
 
 ];
 
