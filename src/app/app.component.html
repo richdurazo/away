@@ -1,67 +1,14 @@
-<app-navbar></app-navbar>
-<div id="wrapper">
-        <div class="overlay"></div>
-    
-        <!-- Sidebar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-            <ul class="nav sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       A way
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/">home</a>
-                </li>
-                <li>
-                    <a href="#" (click)="auth.login()" *ngIf="!auth.authenticated()">login</a>
-                </li>
-                                <li>
-                    <a href="#" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</a>
-                </li>
-                <li>
-                    <a routerLink="/profile" *ngIf="auth.authenticated()">profile</a>
+<md-sidenav-container fullscreen>
 
-                </li>
-
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown heading</li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/richard.durazo">Follow me</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-                <span class="hamb-top"></span>
-    			<span class="hamb-middle"></span>
-				<span class="hamb-bottom"></span>
-            </button>
-          
-                <div class="row">
-                        <router-outlet></router-outlet>
-                </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-<!--<router-outlet></router-outlet>-->
+  <md-toolbar color='primary'>
+    <span class="app-toolbar-filler"></span>
+    <app-navbar></app-navbar>
+  </md-toolbar>
+  <md-tab-group>
+    <md-tab label="Tab 1">Content 1</md-tab>
+    <md-tab label="Tab 2">Content 2</md-tab>
+  </md-tab-group>
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

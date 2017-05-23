@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Parallax, ParallaxConfig  } from '../parallax.directive';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +6,7 @@ import { Parallax, ParallaxConfig  } from '../parallax.directive';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    parallaxConfig: ParallaxConfig = {
-        initialValue: 0,
-        ratio: .3
-    };
+
 
   constructor() { }
 
