@@ -1,13 +1,16 @@
 <md-sidenav-container fullscreen>
-
-  <md-toolbar color='primary'>
+  <md-sidenav #sidenav mode="side" opened="false">
+    <app-sidbarnav-links></app-sidbarnav-links>
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button class="hamburger is-closed" (click)="hamburgerCross(); sidenav.toggle()" [ngClass]="{'is-open': isOpen === false}">
+        <span class="hamb-top"></span>
+    		<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+    </button>
     <span class="app-toolbar-filler"></span>
     <app-navbar></app-navbar>
   </md-toolbar>
-  <md-tab-group>
-    <md-tab label="Tab 1">Content 1</md-tab>
-    <md-tab label="Tab 2">Content 2</md-tab>
-  </md-tab-group>
   <div class="app-content">
     <router-outlet></router-outlet>
   </div>

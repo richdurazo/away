@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.guard';
+import * as d3 from 'd3';
 // import { UserListComponent } from './user-list/user-list.component';
 import {
   MdSidenavModule,
@@ -26,18 +27,29 @@ import {
   MdInputModule
 
 } from '@angular/material';
+import { SidbarnavLinksComponent } from './navbar/sidbarnav-links/sidbarnav-links.component';
+import { LocationsComponent } from './locations/locations.component';
+import { D3BarGraphComponent } from './d3-bar-graph/d3-bar-graph.component';
+import { GraphsComponent } from './graphs/graphs.component';
+import { MapComponent } from './locations/map/map.component';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    SidbarnavLinksComponent,
+    LocationsComponent,
+    D3BarGraphComponent,
+    GraphsComponent,
+    MapComponent
     // UserListComponent
   ],
   imports: [
     BrowserAnimationsModule,
-
     BrowserModule,
     FormsModule,
     HttpModule,
@@ -50,7 +62,10 @@ import {
     MdCardModule,
     MdMenuModule,
     MdTabsModule,
-    MdInputModule
+    MdInputModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDmBfBqrgXymd47v7N_u9dBzxLanZBi1CI'
+    })
     ],
   providers: [
     appRoutingProviders,

@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.guard';
-// import { UserListComponent } from './user-list/user-list.component';
-
+import { LocationsComponent } from './locations/locations.component';
+import { GraphsComponent } from './graphs/graphs.component';
 const appRoutes: Routes = [
     {
         path: '',
@@ -15,12 +15,16 @@ const appRoutes: Routes = [
         component: ProfileComponent,
         canActivate: [AuthGuard]
     },
-    // {
-    //     path: 'users',
-    //     component: UserListComponent,
-    //     canActivate: [AuthGuard]
+    {
+        path: 'locations',
+        component: LocationsComponent,
 
-    // }
+    },
+    {
+        path: 'graphs',
+        component: GraphsComponent,
+
+    }
 
 ];
 

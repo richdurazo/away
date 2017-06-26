@@ -8,11 +8,11 @@ import { Auth } from './auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    isClosed: boolean;
+  isClosed: boolean;
   isOpen: boolean;
   @ViewChild(MdMenuTrigger) trigger: MdMenuTrigger;
-  constructor(private auth: Auth) {}
-    someMethod() {
+
+  someMethod() {
     this.trigger.openMenu();
   }
   hamburgerCross() {
